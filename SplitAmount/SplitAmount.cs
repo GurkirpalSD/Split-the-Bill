@@ -5,9 +5,9 @@ namespace SplitAmountLibrary
     {
         public static decimal Split(decimal amount, int numPeople)
         {
-            if (numPeople <= 0)
+            if (numPeople <= 0 || amount < 0)
             {
-                throw new ArgumentException("Number of people must be greater than zero.");
+                return 0;
             }
             return amount / numPeople;
         }

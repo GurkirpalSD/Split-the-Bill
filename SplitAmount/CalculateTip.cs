@@ -1,4 +1,3 @@
-
 namespace SplitAmountLibrary
 {
     public class CalculateTipForDictionary
@@ -8,6 +7,12 @@ namespace SplitAmountLibrary
             if (tipPercentage < 0 || tipPercentage > 100)
             {
                 throw new ArgumentException("Tip percentage must be between 0 and 100.");
+            }
+
+            // Check if mealCosts is empty
+            if (mealCosts.Count == 0)
+            {
+                return new Dictionary<string, decimal>();
             }
 
             decimal totalCost = 0;
