@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    
+    <ProjectReference Include="..\SplitAmountLibrary\SplitAmount.csproj" />
+    
     <ProjectReference Include="..\SplitAmount\SplitAmount.csproj" />
   </ItemGroup>
 
